@@ -1,7 +1,8 @@
 "use client";
 import React from "react";
 import { Button } from "@mui/material";
-export function CloseButton({ handleClose }) {
+
+const CloseButton = ({ handleClose }) => {
   return (
     <Button
       variant="contained"
@@ -15,4 +16,6 @@ export function CloseButton({ handleClose }) {
       Close
     </Button>
   );
-}
+};
+
+export default CloseButton;

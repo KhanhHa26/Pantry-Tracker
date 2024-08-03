@@ -1,5 +1,4 @@
 "use client";
-import { Loading } from "./Loading";
 import React from "react";
 import {
   Box,
@@ -13,13 +12,13 @@ import {
   Divider,
 } from "@mui/material";
 
-export function SuggestionAI({
+const SuggestionAI = ({
   handleOpenAI,
   openAI,
   handleCloseAI,
   isLoading,
   recipes,
-}) {
+}) => {
   return (
     <>
       <Button
@@ -30,7 +29,7 @@ export function SuggestionAI({
           marginBottom: "16px",
         }}
       >
-        Ask our Magic AI 🔮
+        Ask our Magic AI
       </Button>
 
       <Modal
@@ -55,19 +54,21 @@ export function SuggestionAI({
             borderRadius="8px"
             overflow="auto"
           >
+            <Typography
+              id="modal-modal-title"
+              variant="h4"
+              component="h2"
+              color="primary"
+              textAlign="center"
+            >
+              Here are the recipes we found 🎉
+            </Typography>
             {isLoading ? (
-              <Loading />
+              <Box display="flex" justifyContent="center" alignItems="center">
+                <CircularProgress />
+              </Box>
             ) : (
               <Box>
-                <Typography
-                  id="modal-modal-title"
-                  variant="h4"
-                  component="h2"
-                  color="primary"
-                  textAlign="center"
-                >
-                  Here are the recipes we found 🎉
-                </Typography>
                 {recipes.map((recipe, index) => (
                   <Box key={index} marginTop="16px" color="black">
                     <Typography variant="h5" component="h3" color="secondary">
@@ -76,7 +77,7 @@ export function SuggestionAI({
                     <Typography variant="subtitle1">
                       {recipe.description}
                     </Typography>
-                    <Typography variant="h6" color="textSecondary">
+                    <Typography variant="h5" color="textSecondary">
                       Ingredients:
                     </Typography>
                     <List>
@@ -86,7 +87,7 @@ export function SuggestionAI({
                         </ListItem>
                       ))}
                     </List>
-                    <Typography variant="h6" color="textSecondary">
+                    <Typography variant="h5" color="textSecondary">
                       Instructions:
                     </Typography>
                     <List>
@@ -117,4 +118,6 @@ export function SuggestionAI({
       </Modal>
     </>
   );
-}
+};
+
+export default SuggestionAI;

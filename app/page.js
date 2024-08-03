@@ -34,9 +34,7 @@ const Home = () => {
     try {
       setLoading(true);
       const pantryString = pantry.map((item) => item.name).join(", ");
-      console.log("Pantry String: ", pantryString);
       const recipes = await generateRecepes(pantryString);
-      console.log("Generated Recipes: ", recipes);
       setRecipes(recipes);
     } catch (error) {
       console.error("Error generating recipes:", error);
