@@ -55,15 +55,6 @@ const SuggestionAI = ({
             borderRadius="8px"
             overflow="auto"
           >
-            <Typography
-              id="modal-modal-title"
-              variant="h4"
-              component="h2"
-              color="primary"
-              textAlign="center"
-            >
-              Here are the recipes we found 🎉
-            </Typography>
             {isLoading ? (
               <Loading />
             ) : (
