@@ -1,40 +1,61 @@
-<<<<<<< HEAD
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1>Pantry Tracker👩🏻‍🍳🍰🥣♡</h1>
+<p>Pantry Tracker is a web application that helps you keep track of your pantry items and suggests recipes based on the ingredients you have. It leverages Firebase for the backend and integrates OpenAI for recipe suggestions.</p>
 
-## Getting Started
+<h2>Demo</h2>
+<p>You can check out the live demo of the application <a href="https://pantry-tracker-delta-five.vercel.app/" target="_blank">here</a>.</p>
+<img width="500" alt="Screenshot 2024-08-03 at 2 27 04 PM" src="https://github.com/user-attachments/assets/2e571ce9-31c5-477d-bdf3-718ea8f625ab">
 
-First, run the development server:
+<h2>Features</h2>
+<ul>
+    <li>Add, remove, and update pantry items.</li>
+    <li>Get recipe suggestions based on your current pantry items using AI.</li>
+    <li>User-friendly interface with interactive modals for adding items and viewing recipes.</li>
+</ul>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<h2>Technologies Used</h2>
+<ul>
+    <li>React</li>
+    <li>Next.js</li>
+    <li>Firebase Firestore</li>
+    <li>Material-UI</li>
+    <li>OpenAI API</li>
+</ul>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<h2>Getting Started</h2>
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+<h3>Prerequisites</h3>
+<p>Node.js and npm installed on your machine.</p>
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+<h3>Installation</h3>
+<ol>
+    <li>Clone the repository:
+        <pre><code>git clone https://github.com/KhanhHa26/Pantry-Tracker.git
+cd Pantry-Tracker</code></pre>
+    </li>
+    <li>Install the dependencies:
+        <pre><code>npm install</code></pre>
+    </li>
+    <li>Set up Firebase:
+        <ul>
+            <li>Create a Firebase project.</li>
+            <li>Enable Firestore.</li>
+            <li>Obtain your Firebase config and replace the placeholder values in the <code>firebase.js</code> file.</li>
+        </ul>
+    </li>
+    <li>Set up OpenAI:
+        <ul>
+            <li>Obtain your OpenAI API key.</li>
+            <li>Create an <code>.env</code> file in the root of the project and add your OpenAI API key:
+                <pre><code>OPENAI_API_KEY=your_openai_api_key</code></pre>
+            </li>
+        </ul>
+    </li>
+</ol>
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-=======
-# Pantry-Tracker
->>>>>>> origin/main
+<h3>Running the Application</h3>
+<ol>
+    <li>Start the development server:
+        <pre><code>npm run dev</code></pre>
+    </li>
+    <li>Open <a href="http://localhost:3000" target="_blank">http://localhost:3000</a> in your browser to view the application.</li>
+</ol>
