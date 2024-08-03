@@ -1,6 +1,5 @@
 "use client";
-import { CloseButton } from "./CloseButton";
-import { SuggestionAI } from "./SuggestionAI";
+import React, { useEffect, useState } from "react";
 import {
   Box,
   Button,
@@ -18,7 +17,8 @@ import {
   setDoc,
   deleteDoc,
 } from "firebase/firestore";
-import { useEffect, useState } from "react";
+import SuggestionAI from "./SuggestionAI";
+import CloseButton from "./CloseButton";
 import { generateRecepes } from "./action";
 
 const Home = () => {
@@ -45,7 +45,6 @@ const Home = () => {
     }
   };
 
-  //------------HANDLING OPEN AND CLOSE MODAL--------------------
   const handleOpenAI = () => {
     setOpenAI(true);
     displayAISuggestions();
@@ -63,7 +62,6 @@ const Home = () => {
     setOpen(false);
   };
 
-  //------------UPDATE PANTRY--------------------
   const updatePantry = async () => {
     try {
       const itemsCollection = collection(firestore, "pantry");
@@ -80,10 +78,11 @@ const Home = () => {
   };
 
   useEffect(() => {
-    updatePantry();
+    if (typeof window !== "undefined") {
+      updatePantry();
+    }
   }, []);
 
-  //------------ADDING, REMOVING, and UPDATING ITEM--------------------
   const removeItem = async (item) => {
     try {
       const docRef = doc(firestore, "pantry", item.id);
@@ -279,7 +278,6 @@ const Home = () => {
                 </Button>
                 <Button
                   variant="contained"
-                  color="secondary"
                   onClick={() =>
                     updateQuantity(item, Math.max(item.quantity - 1, 0))
                   }
