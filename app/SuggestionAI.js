@@ -59,6 +59,15 @@ const SuggestionAI = ({
               <Loading />
             ) : (
               <Box>
+                <Typography
+                  id="modal-modal-title"
+                  variant="h4"
+                  component="h2"
+                  color="primary"
+                  textAlign="center"
+                >
+                  Here are the recipes we found 🎉
+                </Typography>
                 {recipes.map((recipe, index) => (
                   <Box key={index} marginTop="16px" color="black">
                     <Typography variant="h5" component="h3" color="secondary">
