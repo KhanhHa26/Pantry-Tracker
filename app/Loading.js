@@ -13,6 +13,7 @@ export function Loading({}) {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
+
   return (
     <Box
       display="flex"

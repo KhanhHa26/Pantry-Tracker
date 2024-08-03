@@ -11,6 +11,7 @@ import {
   ListItemText,
   Divider,
 } from "@mui/material";
+import { Loading } from "./Loading";
 
 const SuggestionAI = ({
   handleOpenAI,
@@ -64,9 +65,7 @@ const SuggestionAI = ({
               Here are the recipes we found 🎉
             </Typography>
             {isLoading ? (
-              <Box display="flex" justifyContent="center" alignItems="center">
-                <CircularProgress />
-              </Box>
+              <Loading />
             ) : (
               <Box>
                 {recipes.map((recipe, index) => (
