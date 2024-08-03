@@ -1,6 +1,6 @@
 "use client";
 import { Loading } from "./Loading";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import {
   Box,
   Button,
@@ -11,19 +11,7 @@ import {
   ListItem,
   ListItemText,
   Divider,
-  Stack,
-  TextField,
 } from "@mui/material";
-import { firestore } from "@/firebase";
-import {
-  collection,
-  doc,
-  getDocs,
-  query,
-  setDoc,
-  deleteDoc,
-} from "firebase/firestore";
-import { generateRecepes } from "./action";
 
 export function SuggestionAI({
   handleOpenAI,

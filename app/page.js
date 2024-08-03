@@ -80,10 +80,7 @@ const Home = () => {
   };
 
   useEffect(() => {
-    // Check if we are running in the browser
-    if (typeof window !== "undefined") {
-      updatePantry();
-    }
+    updatePantry();
   }, []);
 
   //------------ADDING, REMOVING, and UPDATING ITEM--------------------
