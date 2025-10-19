@@ -3,13 +3,13 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBO0A1zMplReuLVX25fxtFDbLe4TLbwBXM",
-  authDomain: "pantry-tracker-17bbf.firebaseapp.com",
-  projectId: "pantry-tracker-17bbf",
-  storageBucket: "pantry-tracker-17bbf.appspot.com",
-  messagingSenderId: "384214227358",
-  appId: "1:384214227358:web:51622a0998440f18995e8f",
-  measurementId: "G-THLW5JB5TN",
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
 };
 
 // Initialize Firebase
